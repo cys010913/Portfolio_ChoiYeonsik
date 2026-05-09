@@ -12,13 +12,7 @@ import { PROJECTS_DATA } from './constants';
 import { ProjectItem } from './types';
 
 export default function App() {
-  const [loading, setLoading] = useState(true);
   const [selectedItem, setSelectedItem] = useState<ProjectItem | null>(null);
-
-  useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 1000);
-    return () => clearTimeout(timer);
-  }, []);
 
   useEffect(() => {
     const handleEsc = (e: KeyboardEvent) => {
@@ -27,20 +21,6 @@ export default function App() {
     window.addEventListener('keydown', handleEsc);
     return () => window.removeEventListener('keydown', handleEsc);
   }, []);
-
-  if (loading) {
-    return (
-      <div className="h-screen w-screen bg-[#F9F9F7] flex items-center justify-center">
-        <motion.div 
-          animate={{ opacity: [0.2, 1, 0.2] }}
-          transition={{ repeat: Infinity, duration: 2 }}
-          className="text-xs uppercase tracking-[0.5em] font-bold"
-        >
-          Loading / 26
-        </motion.div>
-      </div>
-    );
-  }
 
   return (
     <div className="relative selection:bg-black selection:text-white bg-[#F9F9F7]">
