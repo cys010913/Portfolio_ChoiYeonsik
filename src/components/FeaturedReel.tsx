@@ -5,7 +5,7 @@ import { Play } from 'lucide-react';
 import { SectionTitle } from './SectionTitle';
 
 export const FeaturedReel: React.FC = () => {
-  const videoUrl = "https://drive.google.com/file/d/1txE1XHNnk4jzUrmbnNpC9w9TXGrwmwBc/preview";
+  const videoUrl = "https://drive.google.com/file/d/1txE1XHNnk4jzUrmbnNpC9w9TXGrwmwBc/preview?autoplay=1";
 
   return (
     <section id="featured-reel" className="py-32 md:py-40 px-6 border-b border-black/[0.05] bg-black/[0.01] scroll-mt-20">

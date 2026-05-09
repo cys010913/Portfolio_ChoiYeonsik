@@ -2,7 +2,7 @@
 export const getEmbedUrl = (url: string) => {
   const match = url.match(/\/d\/([^/?]+)/);
   if (match) {
-    return `https://drive.google.com/file/d/${match[1]}/preview`;
+    return `https://drive.google.com/file/d/${match[1]}/preview?autoplay=1`;
   }
   return url;
 };
