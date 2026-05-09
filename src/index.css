@@ -12,8 +12,11 @@
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
   body {
-    @apply bg-bg-light text-brand-primary font-sans selection:bg-brand-primary selection:text-white;
+    @apply bg-bg-light text-brand-primary font-sans selection:bg-brand-primary selection:text-white overflow-x-hidden;
   }
 }
 
@@ -23,5 +26,12 @@
   }
   .border-editorial {
     @apply border-black/10;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
 }
