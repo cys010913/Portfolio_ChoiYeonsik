@@ -51,18 +51,18 @@ export const Navbar: React.FC = () => {
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
             className="md:hidden bg-white border-t border-black/5 overflow-hidden"
           >
-            <div className="flex flex-col p-6 gap-4">
+            <div className="flex flex-col p-8 gap-2">
               {NAV_ITEMS.map((item) => (
                 <a 
                   key={item.id}
                   href={`#${item.id}`}
                   onClick={() => setIsMenuOpen(false)}
-                  className="text-sm uppercase font-bold tracking-[0.2em] py-4 border-b border-black/[0.03] text-black/80"
+                  className="text-xs uppercase font-bold tracking-[0.4em] py-5 border-b border-black/[0.03] text-black/60 hover:text-black transition-colors"
                 >
                   {item.name}
                 </a>
