@@ -16,7 +16,7 @@ interface ProjectsProps {
 
 export const Projects: React.FC<ProjectsProps> = ({ id, title, subtitle, items, onImageClick }) => {
   return (
-    <section id={id} className="py-40 px-6 border-b border-black/[0.03] scroll-mt-20">
+    <section id={id} className="py-24 md:py-40 px-6 border-b border-black/[0.03] scroll-mt-20">
       <div className="max-w-7xl mx-auto">
         <SectionTitle title={title} subtitle={subtitle} />
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-20 gap-y-32">
@@ -53,7 +53,7 @@ export const Projects: React.FC<ProjectsProps> = ({ id, title, subtitle, items, 
                       <div className="w-full h-full relative">
                         <iframe 
                           src={getEmbedUrl(item.image)}
-                          className="w-full h-full border-0 absolute inset-0 bg-transparent z-0"
+                          className="w-full h-full border-0 absolute inset-0 bg-transparent z-10"
                           allow="autoplay; fullscreen"
                           allowFullScreen
                           title={item.title}

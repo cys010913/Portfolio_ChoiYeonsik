@@ -6,7 +6,7 @@ import { EXPERIENCES, CERTIFICATIONS } from '../constants';
 
 export const Profile: React.FC = () => {
   return (
-    <section id="profile" className="py-40 px-6 border-b border-black/[0.05] scroll-mt-20">
+    <section id="profile" className="py-24 md:py-40 px-6 border-b border-black/[0.05] scroll-mt-20">
       <div className="max-w-7xl mx-auto">
         <SectionTitle title="about me." subtitle="Profile" />
         

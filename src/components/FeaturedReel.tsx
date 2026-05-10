@@ -8,7 +8,7 @@ export const FeaturedReel: React.FC = () => {
   const videoUrl = "https://drive.google.com/file/d/1txE1XHNnk4jzUrmbnNpC9w9TXGrwmwBc/preview";
 
   return (
-    <section id="featured-reel" className="py-32 md:py-40 px-6 border-b border-black/[0.05] bg-black/[0.01] scroll-mt-20">
+    <section id="featured-reel" className="py-20 md:py-40 px-6 border-b border-black/[0.05] bg-black/[0.01] scroll-mt-20">
       <div className="max-w-7xl mx-auto">
         <SectionTitle title="GAME ANIMATION REEL" subtitle="Main Showcase" />
         
@@ -21,7 +21,7 @@ export const FeaturedReel: React.FC = () => {
         >
           <iframe 
             src={videoUrl}
-            className="w-full h-full border-0 absolute inset-0 z-0 bg-transparent"
+            className="w-full h-full border-0 absolute inset-0 z-10 bg-transparent"
             allow="autoplay; fullscreen"
             allowFullScreen
             title="Featured Demo Reel"
