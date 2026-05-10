@@ -1,12 +1,8 @@
 
-export const getEmbedUrl = (url: string, autoplay: boolean = false) => {
-  const match = url.match(/\/d\/([^/?]+)/);
+export const getEmbedUrl = (url: string) => {
+  const match = url.match(/\/d\/([^/]+)/);
   if (match) {
-    let baseUrl = `https://drive.google.com/file/d/${match[1]}/preview`;
-    if (autoplay) {
-      baseUrl += '?autoplay=1';
-    }
-    return baseUrl;
+    return `https://drive.google.com/file/d/${match[1]}/preview`;
   }
   return url;
 };

@@ -21,7 +21,8 @@ export const Projects: React.FC<ProjectsProps> = ({ id, title, subtitle, items, 
         <SectionTitle title={title} subtitle={subtitle} />
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-20 gap-y-32">
           {items.map((item, idx) => {
-            const videoMode = isDriveVideo(item.image);
+            const isArtSection = id === 'art';
+            const videoMode = !isArtSection && isDriveVideo(item.image);
             return (
               <motion.div 
                 key={idx}

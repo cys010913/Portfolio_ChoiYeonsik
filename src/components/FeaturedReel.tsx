@@ -26,14 +26,9 @@ export const FeaturedReel: React.FC = () => {
           <p className="text-lg md:text-xl font-display font-bold uppercase tracking-tight max-w-xl">
             RIGGING & ANIMATION
           </p>
-          <div className="flex flex-wrap gap-4">
-            <div className="flex gap-2">
-              <span className="text-[10px] font-bold tracking-widest uppercase px-3 py-1 border border-black/10">3DS MAX</span>
-              <span className="text-[10px] font-bold tracking-widest uppercase px-3 py-1 border border-black/10">Unreal Engine</span>
-            </div>
-            <button className="px-6 py-3 bg-black text-white text-xs font-bold uppercase tracking-wider hover:opacity-90 transition-all flex items-center gap-2">
-              RESUME <span className="opacity-50">↓</span>
-            </button>
+          <div className="flex flex-wrap gap-2">
+            <span className="text-[10px] font-bold tracking-widest uppercase px-3 py-1 border border-black/10">3DS MAX</span>
+            <span className="text-[10px] font-bold tracking-widest uppercase px-3 py-1 border border-black/10">Unreal Engine</span>
           </div>
         </div>
       </div>
