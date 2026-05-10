@@ -1,6 +1,7 @@
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
+import { Play } from 'lucide-react';
 import { SectionTitle } from './SectionTitle';
 import { ProjectItem } from '../types';
 import { getEmbedUrl, getImageUrl, isDriveVideo } from '../lib/drive';
@@ -39,16 +40,6 @@ export const Projects: React.FC<ProjectsProps> = ({ id, title, subtitle, items, 
                   }}
                 >
                   {videoMode ? (
-                    item.image?.endsWith('.mp4') ? (
-                      <video 
-                        src={item.image} 
-                        autoPlay 
-                        muted 
-                        loop 
-                        playsInline 
-                        className="w-full h-full object-cover"
-                      />
-                    ) : (
                       <div className="w-full h-full relative">
                         <iframe 
                           src={getEmbedUrl(item.image)}
@@ -58,7 +49,6 @@ export const Projects: React.FC<ProjectsProps> = ({ id, title, subtitle, items, 
                           title={item.title}
                         />
                       </div>
-                    )
                   ) : (
                     <div className="w-full h-full flex items-center justify-center bg-black/[0.01]">
                       <img 

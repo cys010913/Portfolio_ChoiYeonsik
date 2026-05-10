@@ -62,7 +62,7 @@ export const Navbar: React.FC = () => {
                   key={item.id}
                   href={`#${item.id}`}
                   onClick={() => setIsMenuOpen(false)}
-                  className="text-xs uppercase font-bold tracking-widest py-2 border-b border-black/[0.03]"
+                  className="text-sm uppercase font-bold tracking-[0.2em] py-4 border-b border-black/[0.03] text-black/80"
                 >
                   {item.name}
                 </a>

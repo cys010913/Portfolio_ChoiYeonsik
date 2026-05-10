@@ -1,7 +1,9 @@
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
+import { Play } from 'lucide-react';
 import { SectionTitle } from './SectionTitle';
+import { getImageUrl } from '../lib/drive';
 
 export const FeaturedReel: React.FC = () => {
   const videoUrl = "https://drive.google.com/file/d/1txE1XHNnk4jzUrmbnNpC9w9TXGrwmwBc/preview";

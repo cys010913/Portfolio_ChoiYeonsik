@@ -12,7 +12,7 @@ export const Hero: React.FC = () => (
         transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
       >
         <span className="text-[10px] font-bold tracking-[0.5em] opacity-30 font-mono block mb-8">PORTFOLIO COLLECTION</span>
-        <h1 className="text-[14vw] sm:text-[12vw] md:text-[10vw] leading-[0.8] font-display font-black uppercase tracking-tighter mb-12 md:mb-16">
+        <h1 className="text-[14vw] sm:text-[12vw] md:text-[10vw] leading-[0.85] font-display font-black uppercase tracking-tighter mb-12 md:mb-16">
           Yeonsik<br/>Choi
         </h1>
         <div className="flex flex-col md:flex-row md:items-center gap-6 md:gap-16">
