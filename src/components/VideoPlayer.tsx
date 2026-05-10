@@ -59,31 +59,26 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({ url, title, thumbnailS
     );
   }
 
-  // Mobile: Consistent Tap-to-Play pattern
+  // Mobile: Show thumbnail with a direct link button
   return (
-    <div 
-      className="w-full h-full relative cursor-pointer bg-black overflow-hidden"
-      onClick={() => !isPlaying && setIsPlaying(true)}
-    >
-      {isPlaying ? (
-        <div className="absolute inset-0 w-full h-full bg-black z-20">
-          {isDirectVideo ? renderDirectVideo(true) : renderDriveVideo(true)}
-        </div>
-      ) : (
-        <div className="absolute inset-0 w-full h-full">
-          <img 
-            src={thumbnailUrl} 
-            alt={title} 
-            className="w-full h-full object-cover opacity-60"
-            referrerPolicy="no-referrer"
-          />
-          <div className="absolute inset-0 flex items-center justify-center bg-black/30">
-            <div className="w-16 h-16 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center shadow-2xl transition-transform active:scale-90">
-              <Play size={28} className="text-white fill-white ml-1" />
-            </div>
-          </div>
-        </div>
-      )}
+    <div className="w-full h-full relative bg-black overflow-hidden group">
+      <img 
+        src={thumbnailUrl} 
+        alt={title} 
+        className="w-full h-full object-cover opacity-50"
+        referrerPolicy="no-referrer"
+      />
+      <div className="absolute inset-0 flex items-center justify-center bg-black/20 p-6">
+        <a 
+          href={url} 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="flex items-center gap-3 px-8 py-4 bg-white text-black font-bold uppercase tracking-[0.2em] text-xs transition-all active:scale-95 shadow-2xl"
+        >
+          <Play size={16} className="fill-black" />
+          Watch Video
+        </a>
+      </div>
     </div>
   );
 };
