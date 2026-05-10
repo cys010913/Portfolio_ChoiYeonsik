@@ -19,7 +19,7 @@ export const Projects: React.FC<ProjectsProps> = ({ id, title, subtitle, items, 
     <section id={id} className="py-24 md:py-40 px-6 border-b border-black/[0.03] scroll-mt-20">
       <div className="max-w-7xl mx-auto">
         <SectionTitle title={title} subtitle={subtitle} />
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-20 gap-y-32">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-20 gap-y-24 md:gap-y-32">
           {items.map((item, idx) => {
             const isArtSection = id === 'art';
             const videoMode = !isArtSection && isDriveVideo(item.image);

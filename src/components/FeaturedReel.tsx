@@ -5,10 +5,10 @@ import { SectionTitle } from './SectionTitle';
 import { VideoPlayer } from './VideoPlayer';
 
 export const FeaturedReel: React.FC = () => {
-  const videoUrl = "https://drive.google.com/file/d/1txE1XHNnk4jzUrmbnNpC9w9TXGrwmwBc/preview";
+  const videoUrl = "https://youtu.be/XYGFqjgcxRY";
 
   return (
-    <section id="featured-reel" className="py-20 md:py-40 px-6 border-b border-black/[0.05] bg-black/[0.01] scroll-mt-20">
+    <section id="featured-reel" className="py-24 md:py-40 px-6 border-b border-black/[0.05] bg-black/[0.01] scroll-mt-20">
       <div className="max-w-7xl mx-auto">
         <SectionTitle title="2026 GAME ANIMATION REEL" subtitle="Main Showcase" />
         
@@ -22,8 +22,8 @@ export const FeaturedReel: React.FC = () => {
           <VideoPlayer url={videoUrl} title="2026 GAME ANIMATION REEL" thumbnailSize={1920} />
         </motion.div>
         
-        <div className="mt-8 md:mt-12 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
-          <p className="text-lg md:text-xl font-display font-bold uppercase tracking-tight max-w-xl">
+        <div className="mt-10 md:mt-12 flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+          <p className="text-xl md:text-xl font-display font-bold uppercase tracking-tight max-w-xl">
             RIGGING & ANIMATION
           </p>
           <div className="flex flex-wrap gap-2">

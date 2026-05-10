@@ -41,11 +41,16 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({ url, title, thumbnailS
     />
   );
 
-  const renderDriveVideo = () => {
+  const renderEmbedVideo = (autoPlay: boolean) => {
+    const isYouTube = embedUrl.includes('youtube.com');
+    const finalUrl = autoPlay 
+      ? `${embedUrl}${embedUrl.includes('?') ? '&' : '?'}autoplay=1${isYouTube ? '&mute=1' : ''}` 
+      : embedUrl;
+
     return (
       <div className="absolute inset-0 w-full h-full bg-black overflow-hidden">
         <iframe 
-          src={embedUrl}
+          src={finalUrl}
           className="w-full h-full border-0 absolute inset-0 bg-black z-10"
           allow="autoplay; fullscreen"
           allowFullScreen
@@ -59,7 +64,7 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({ url, title, thumbnailS
   if (!isMobile) {
     return (
       <div className="w-full h-full bg-black relative">
-        {isDirectVideo ? renderDirectVideo(true) : renderDriveVideo()}
+        {isDirectVideo ? renderDirectVideo(true) : renderEmbedVideo(false)}
       </div>
     );
   }
@@ -69,7 +74,7 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({ url, title, thumbnailS
     <div className="w-full h-full relative bg-black overflow-hidden group">
       {isPlaying ? (
         <div className="absolute inset-0 w-full h-full bg-black z-20">
-          {isDirectVideo ? renderDirectVideo(true) : renderDriveVideo()}
+          {isDirectVideo ? renderDirectVideo(true) : renderEmbedVideo(true)}
         </div>
       ) : (
         <div 

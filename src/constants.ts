@@ -35,19 +35,19 @@ export const PROJECTS_DATA = {
       { 
         title: "2026 GAME ANIMATION REEL", 
         desc: "rigging&animation(3ds max)", 
-        image: "https://drive.google.com/file/d/1txE1XHNnk4jzUrmbnNpC9w9TXGrwmwBc/view?usp=drive_link", 
+        image: "https://youtu.be/XYGFqjgcxRY", 
         tags: ["3DS MAX", "Unreal Engine"] 
       },
       { 
         title: "demo reel ( 2025 )", 
         desc: "attack, run, walk, fly, facial(maya, 3ds max)", 
-        image: "https://drive.google.com/file/d/1txE1XHNnk4jzUrmbnNpC9w9TXGrwmwBc/view?usp=drive_link", 
+        image: "https://youtu.be/XYGFqjgcxRY", 
         tags: ["Maya", "3ds Max"] 
       },
       { 
         title: "personal work ( 2025 )", 
         desc: "treasure hunter(maya)", 
-        image: "https://drive.google.com/file/d/19e5RQfqkPdPAqmGjAXjd_MtZwJ916lPh/view?usp=sharing",
+        image: "https://youtu.be/11bOSDxa4is",
         tags: ["Maya"] 
       }
     ]
@@ -59,19 +59,19 @@ export const PROJECTS_DATA = {
       { 
         title: "unreal project: cave", 
         desc: "personal work", 
-        image: "https://drive.google.com/file/d/1P6YqvjsN7S2FMxFKPY49o5ZrrgQBSjSy/view?usp=drive_link",
+        image: "https://youtu.be/KaoBiGpdyg4",
         tags: ["Unreal Engine"] 
       },
       { 
         title: "unreal project: red riding hood", 
         desc: "background design / look dev / shooting & editing", 
-        image: "https://drive.google.com/file/d/1lXq68T1f5J7r9qFrMLzpnVdfDcHfyctA/view?usp=drive_link",
+        image: "https://youtu.be/XVeRtnbC0Mg", 
         tags: ["Unreal Engine"] 
       },
       { 
         title: "modeling", 
         desc: "mechanic and temple(maya)", 
-        image: "https://drive.google.com/file/d/1mVphAMz5dhaSHt1a3nQivT3u2jm2X6Tv/view?usp=drive_link",
+        image: "https://youtu.be/NGJ0q9sSjF4",
         tags: ["MAYA"] 
       }
     ]
@@ -83,13 +83,13 @@ export const PROJECTS_DATA = {
       { 
         title: "COM tracker", 
         desc: "part selection / 2D trajectory map / playback speed / range selection / scrubbing / loop playback / sketch and onion skin", 
-        image: "https://drive.google.com/file/d/1zA3_-gDAoPlae9xn3ZPBdvwbEGI873js/view?usp=drive_link",
+        image: "https://youtu.be/p79AmEc6euo",
         tags: ["Tool", "Script"] 
       },
       { 
         title: "motion lab", 
         desc: "key copy & paste / anim align / key decimation / preset & memo / scripts collector", 
-        image: "https://drive.google.com/file/d/1zA3_-gDAoPlae9xn3ZPBdvwbEGI873js/view?usp=drive_link",
+        image: "https://youtu.be/p79AmEc6euo",
         tags: ["Tool", "Script"] 
       }
     ]
