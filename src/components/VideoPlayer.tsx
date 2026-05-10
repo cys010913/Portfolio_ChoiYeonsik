@@ -35,10 +35,11 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({ url, title, thumbnailS
       <div className="w-full h-full bg-black relative">
         <iframe 
           src={getEmbedUrl(url, false)}
-          className="w-full h-full border-0 absolute inset-0 bg-transparent z-10"
+          className="w-full h-full border-0 absolute inset-0 bg-black z-10"
           allow="autoplay; fullscreen"
           allowFullScreen
           title={title}
+          loading="lazy"
         />
       </div>
     );
@@ -47,35 +48,35 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({ url, title, thumbnailS
   // On Mobile, show thumbnail + play button to ensure one-tap playback experience
   return (
     <div 
-      className="w-full h-full relative cursor-pointer bg-black group"
+      className="w-full h-full relative cursor-pointer bg-black overflow-hidden group"
       onClick={() => !isPlaying && handlePlay()}
     >
       {isPlaying ? (
-        <>
+        <div className="absolute inset-0 w-full h-full bg-black z-20">
           {isLoading && (
-            <div className="absolute inset-0 flex items-center justify-center z-0">
-              <Loader2 className="w-8 h-8 text-white/20 animate-spin" />
+            <div className="absolute inset-0 flex items-center justify-center z-10 bg-black">
+              <Loader2 className="w-8 h-8 text-white/40 animate-spin" />
             </div>
           )}
           <iframe 
             src={embedUrl}
-            className="w-full h-full border-0 absolute inset-0 bg-transparent z-10"
+            className="w-full h-full border-0 absolute inset-0 bg-black"
             allow="autoplay; fullscreen"
             allowFullScreen
             title={title}
             onLoad={() => setIsLoading(false)}
           />
-        </>
+        </div>
       ) : (
-        <div className="absolute inset-0">
+        <div className="absolute inset-0 w-full h-full">
           <img 
             src={thumbnailUrl} 
             alt={title} 
             className="w-full h-full object-cover opacity-60 transition-transform duration-700 group-hover:scale-105"
             referrerPolicy="no-referrer"
           />
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:bg-white/20 shadow-2xl">
+          <div className="absolute inset-0 flex items-center justify-center bg-black/10">
+            <div className="w-16 h-16 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:bg-white/20 shadow-2xl">
               <Play size={24} className="text-white fill-white ml-1" />
             </div>
           </div>
