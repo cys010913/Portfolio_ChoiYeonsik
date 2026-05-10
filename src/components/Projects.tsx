@@ -14,6 +14,43 @@ interface ProjectsProps {
   onImageClick?: (item: ProjectItem) => void;
 }
 
+const VideoPlayer: React.FC<{ url: string; title: string }> = ({ url, title }) => {
+  const [isPlaying, setIsPlaying] = useState(false);
+  const embedUrl = getEmbedUrl(url, true);
+  const thumbnailUrl = getImageUrl(url, 1280);
+
+  return (
+    <div 
+      className="w-full h-full relative cursor-pointer bg-black group/video"
+      onClick={() => !isPlaying && setIsPlaying(true)}
+    >
+      {isPlaying ? (
+        <iframe 
+          src={embedUrl}
+          className="w-full h-full border-0 absolute inset-0 bg-black z-10"
+          allow="autoplay; fullscreen"
+          allowFullScreen
+          title={title}
+        />
+      ) : (
+        <div className="absolute inset-0 z-0">
+          <img 
+            src={thumbnailUrl} 
+            alt={title} 
+            className="w-full h-full object-cover opacity-60 transition-transform duration-700 group-hover/video:scale-105"
+            referrerPolicy="no-referrer"
+          />
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="w-16 h-16 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center transition-all duration-300 group-hover/video:scale-110 group-hover/video:bg-white/20 shadow-xl">
+              <Play size={24} className="text-white fill-white ml-1" />
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
+
 export const Projects: React.FC<ProjectsProps> = ({ id, title, subtitle, items, onImageClick }) => {
   return (
     <section id={id} className="py-24 md:py-40 px-6 border-b border-black/[0.03] scroll-mt-20">
@@ -21,7 +58,7 @@ export const Projects: React.FC<ProjectsProps> = ({ id, title, subtitle, items, 
         <SectionTitle title={title} subtitle={subtitle} />
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-20 gap-y-32">
           {items.map((item, idx) => {
-            const videoMode = isDriveVideo(item.image, id, item.title);
+            const videoMode = isDriveVideo(item.image);
             return (
               <motion.div 
                 key={idx}
@@ -40,15 +77,7 @@ export const Projects: React.FC<ProjectsProps> = ({ id, title, subtitle, items, 
                   }}
                 >
                   {videoMode ? (
-                      <div className="w-full h-full relative">
-                        <iframe 
-                          src={getEmbedUrl(item.image)}
-                          className="w-full h-full border-0 absolute inset-0 bg-transparent z-10"
-                          allow="autoplay; fullscreen"
-                          allowFullScreen
-                          title={item.title}
-                        />
-                      </div>
+                      <VideoPlayer url={item.image} title={item.title} />
                   ) : (
                     <div className="w-full h-full flex items-center justify-center bg-black/[0.01]">
                       <img 

@@ -1,8 +1,12 @@
 
-export const getEmbedUrl = (url: string) => {
+export const getEmbedUrl = (url: string, autoplay: boolean = false) => {
   const match = url.match(/\/d\/([^/?]+)/);
   if (match) {
-    return `https://drive.google.com/file/d/${match[1]}/preview`;
+    let baseUrl = `https://drive.google.com/file/d/${match[1]}/preview`;
+    if (autoplay) {
+      baseUrl += '?autoplay=1';
+    }
+    return baseUrl;
   }
   return url;
 };
@@ -12,10 +16,6 @@ export const getImageUrl = (url: string, size: number = 1000) => {
   return match ? `https://drive.google.com/thumbnail?id=${match[1]}&sz=w${size}` : url;
 };
 
-export const isDriveVideo = (url: string, id: string, title: string) => {
-  const driveVideoKeywords = ['reel', 'project', 'motion', 'technical', 'anim', 'tracker', 'script', 'tool'];
-  const videoSections = ['demoreel', 'technical', 'scripting'];
-  const isVideoSection = videoSections.includes(id);
-  const titleHasKeyword = driveVideoKeywords.some(k => title.toLowerCase().includes(k));
-  return url?.endsWith('.mp4') || (url?.includes('drive.google.com') && (isVideoSection || titleHasKeyword));
+export const isDriveVideo = (url: string) => {
+  return url?.includes('drive.google.com') || url?.endsWith('.mp4');
 };
