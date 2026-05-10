@@ -51,12 +51,9 @@ export const Projects: React.FC<ProjectsProps> = ({ id, title, subtitle, items, 
                       />
                     ) : (
                       <div className="w-full h-full relative">
-                        <div className="absolute inset-0 flex items-center justify-center bg-black/[0.02] pointer-events-none">
-                          <Play size={32} className="text-black/10" />
-                        </div>
                         <iframe 
                           src={getEmbedUrl(item.image)}
-                          className="w-full h-full border-0 absolute inset-0 bg-transparent z-10"
+                          className="w-full h-full border-0 absolute inset-0 bg-transparent z-0"
                           allow="autoplay; fullscreen"
                           allowFullScreen
                           title={item.title}

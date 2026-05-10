@@ -41,7 +41,7 @@ export const Profile: React.FC = () => {
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-10 pt-12 border-t border-black/10">
                 <div className="space-y-4">
                   <p className="text-[10px] uppercase tracking-widest font-bold opacity-30 font-mono">tools</p>
-                  <ul className="text-sm font-bold text-black/70 font-mono space-y-1 lowercase">
+                  <ul className="text-sm font-bold text-black/70 font-mono space-y-1 uppercase italic">
                     <li>maya</li>
                     <li>3ds max</li>
                     <li>unreal engine</li>

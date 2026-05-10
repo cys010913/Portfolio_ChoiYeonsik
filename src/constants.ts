@@ -1,6 +1,6 @@
 
 export const NAV_ITEMS = [
-  { name: '2026 reel', id: 'featured-reel' },
+  { name: 'reel', id: 'featured-reel' },
   { name: 'profile', id: 'profile' },
   { name: 'motion', id: 'demoreel' },
   { name: 'engine', id: 'technical' },
@@ -33,11 +33,11 @@ export const PROJECTS_DATA = {
     subtitle: "MOTION",
     items: [
       { 
-        title: "2026 GAME ANIMATION REEL", 
-        desc: "rigging&animation(3ds max)", 
-        image: "https://drive.google.com/file/d/1txE1XHNnk4jzUrmbnNpC9w9TXGrwmwBc/view?usp=drive_link", 
-        tags: ["3DS MAX", "Unreal Engine"] 
-      },
+        title: "GAME ANIMATION REEL", 
+desc: "rigging&animation(3ds max)", 
+image: "https://drive.google.com/file/d/1txE1XHNnk4jzUrmbnNpC9w9TXGrwmwBc/view?usp=drive_link", 
+tags: ["3DS MAX", "Unreal Engine"] 
+},
       { 
         title: "demo reel ( 2025 )", 
         desc: "attack, run, walk, fly, facial(maya, 3ds max)", 
@@ -72,7 +72,7 @@ export const PROJECTS_DATA = {
         title: "modeling", 
         desc: "mechanic and temple(maya)", 
         image: "https://drive.google.com/file/d/1mVphAMz5dhaSHt1a3nQivT3u2jm2X6Tv/view?usp=drive_link",
-        tags: ["Modeling"] 
+        tags: ["MAYA"] 
       }
     ]
   },

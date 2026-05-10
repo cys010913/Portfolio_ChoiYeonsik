@@ -18,7 +18,7 @@ export const Footer: React.FC = () => (
     </div>
     <div className="max-w-7xl mx-auto pt-20 mt-20 border-t border-white/5 flex flex-col md:flex-row justify-between gap-4 text-[9px] font-mono opacity-20 tracking-widest uppercase">
       <span>©2024 BY YOUN_SIC. ALL RIGHTS RESERVED.</span>
-      <span>KOR / ENG / JAPANESE</span>
+      <span>KOR / ENG / JP</span>
     </div>
   </footer>
 );
