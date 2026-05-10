@@ -33,11 +33,11 @@ export const PROJECTS_DATA = {
     subtitle: "MOTION",
     items: [
       { 
-        title: "GAME ANIMATION REEL", 
-desc: "rigging&animation(3ds max)", 
-image: "https://drive.google.com/file/d/1txE1XHNnk4jzUrmbnNpC9w9TXGrwmwBc/view?usp=drive_link", 
-tags: ["3DS MAX", "Unreal Engine"] 
-},
+        title: "2026 GAME ANIMATION REEL", 
+        desc: "rigging&animation(3ds max)", 
+        image: "https://drive.google.com/file/d/1txE1XHNnk4jzUrmbnNpC9w9TXGrwmwBc/view?usp=drive_link", 
+        tags: ["3DS MAX", "Unreal Engine"] 
+      },
       { 
         title: "demo reel ( 2025 )", 
         desc: "attack, run, walk, fly, facial(maya, 3ds max)", 

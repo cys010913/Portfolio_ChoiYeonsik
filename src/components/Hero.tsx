@@ -12,24 +12,24 @@ export const Hero: React.FC = () => (
         transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
       >
         <span className="text-[10px] font-bold tracking-[0.5em] opacity-30 font-mono block mb-8">PORTFOLIO COLLECTION</span>
-        <h1 className="text-[12vw] md:text-[10vw] leading-[0.85] font-display font-black uppercase tracking-tighter mb-16">
+        <h1 className="text-[14vw] sm:text-[12vw] md:text-[10vw] leading-[0.8] font-display font-black uppercase tracking-tighter mb-12 md:mb-16">
           Yeonsik<br/>Choi
         </h1>
-        <div className="flex flex-col md:flex-row md:items-center gap-8 md:gap-16">
-          <div className="text-lg md:text-xl font-medium max-w-sm leading-tight text-black/80 font-mono">
+        <div className="flex flex-col md:flex-row md:items-center gap-6 md:gap-16">
+          <div className="text-base md:text-xl font-medium max-w-sm leading-tight text-black/80 font-mono">
             KOR / ENG / JP
           </div>
           <button 
             onClick={() => {
-              const el = document.getElementById('demoreel');
+              const el = document.getElementById('featured-reel');
               if (el) el.scrollIntoView({ behavior: 'smooth' });
             }}
-            className="flex items-center gap-3 md:gap-4 group cursor-pointer w-fit max-w-full"
+            className="flex items-center gap-3 md:gap-4 group cursor-pointer w-fit"
           >
-            <div className="w-10 h-10 md:w-12 md:h-12 rounded-full border border-black/10 flex items-center justify-center group-hover:bg-black group-hover:text-white transition-all duration-300 shrink-0">
-              <ArrowDown size={14} className="group-hover:translate-y-1 transition-transform md:w-4 md:h-4" />
+            <div className="w-12 h-12 md:w-16 md:h-16 rounded-full border border-black/10 flex items-center justify-center group-hover:bg-black group-hover:text-white transition-all duration-300 shrink-0">
+              <ArrowDown size={18} className="group-hover:translate-y-1 transition-transform md:w-6 md:h-6" />
             </div>
-            <span className="text-[10px] md:text-xs font-bold tracking-widest uppercase truncate">Scroll to work</span>
+            <span className="text-[10px] md:text-xs font-bold tracking-widest uppercase">Scroll to work</span>
           </button>
         </div>
       </motion.div>

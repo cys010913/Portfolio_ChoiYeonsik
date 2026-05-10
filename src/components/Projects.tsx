@@ -1,7 +1,6 @@
 
 import React from 'react';
 import { motion } from 'motion/react';
-import { Play } from 'lucide-react';
 import { SectionTitle } from './SectionTitle';
 import { ProjectItem } from '../types';
 import { getEmbedUrl, getImageUrl, isDriveVideo } from '../lib/drive';
@@ -32,7 +31,7 @@ export const Projects: React.FC<ProjectsProps> = ({ id, title, subtitle, items, 
                 className="group flex flex-col"
               >
                 <div 
-                  className={`aspect-video bg-black/[0.03] mb-8 overflow-hidden relative border border-black/[0.05] group/media ${!videoMode ? 'cursor-zoom-in' : ''}`}
+                   className={`aspect-video bg-black/[0.03] mb-6 md:mb-8 overflow-hidden relative border border-black/[0.05] group/media ${!videoMode ? 'cursor-zoom-in' : ''}`}
                   onClick={() => {
                     if (!videoMode) {
                       onImageClick?.(item);
