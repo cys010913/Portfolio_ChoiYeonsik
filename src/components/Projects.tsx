@@ -16,7 +16,7 @@ interface ProjectsProps {
 
 export const Projects: React.FC<ProjectsProps> = ({ id, title, subtitle, items, onImageClick }) => {
   return (
-    <section id={id} className="py-24 md:py-40 px-6 border-b border-black/[0.03] scroll-mt-20">
+    <section id={id} className="py-8 md:py-10 px-6 border-b border-black/[0.03] scroll-mt-24">
       <div className="max-w-7xl mx-auto">
         <SectionTitle title={title} subtitle={subtitle} />
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-20 gap-y-24 md:gap-y-32">

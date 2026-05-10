@@ -15,12 +15,12 @@ export const Navbar: React.FC = () => {
   }, []);
 
   return (
-    <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${isScrolled || isMenuOpen ? 'bg-white/95 backdrop-blur-xl py-4 border-b border-black/[0.05]' : 'bg-transparent py-8'}`}>
+    <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${isScrolled || isMenuOpen ? 'bg-white/95 backdrop-blur-xl py-4 border-b border-black/[0.05]' : 'bg-white/50 backdrop-blur-md md:bg-transparent py-6 md:py-8'}`}>
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
         <motion.div 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          className="text-[10px] uppercase font-bold tracking-[0.3em] font-mono mr-4"
+          className="text-[18px] sm:text-xl uppercase font-bold tracking-[0.3em] font-mono mr-4"
         >
           youn_sic
         </motion.div>
@@ -31,7 +31,7 @@ export const Navbar: React.FC = () => {
             <a 
               key={item.id}
               href={`#${item.id}`}
-              className="text-[11px] tracking-widest font-bold opacity-40 hover:opacity-100 hover:tracking-tight transition-all duration-300 whitespace-nowrap py-1"
+              className="text-[13px] tracking-widest font-bold opacity-40 hover:opacity-100 hover:tracking-tight transition-all duration-300 whitespace-nowrap py-1"
             >
               {item.name}
             </a>
@@ -43,7 +43,7 @@ export const Navbar: React.FC = () => {
           className="md:hidden p-2 -mr-2"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
-          {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
+          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
@@ -62,7 +62,7 @@ export const Navbar: React.FC = () => {
                   key={item.id}
                   href={`#${item.id}`}
                   onClick={() => setIsMenuOpen(false)}
-                  className="text-[11px] uppercase font-bold tracking-[0.4em] py-6 border-b border-black/[0.03] text-black/60 hover:text-black transition-colors"
+                  className="text-base sm:text-lg uppercase font-bold tracking-[0.4em] py-6 border-b border-black/[0.03] text-black/60 hover:text-black transition-colors"
                 >
                   {item.name}
                 </a>
