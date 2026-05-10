@@ -42,7 +42,7 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({ url, title, thumbnailS
     <div className="absolute inset-0 w-full h-full bg-black overflow-hidden">
       <iframe 
         src={autoplay ? `${embedUrl}${embedUrl.includes('?') ? '&' : '?'}autoplay=1` : embedUrl}
-        className="w-full h-[115%] -top-[7.5%] border-0 absolute inset-0 bg-black z-10"
+        className="w-full h-full border-0 absolute inset-0 bg-black z-10"
         allow="autoplay; fullscreen"
         allowFullScreen
         title={title}
