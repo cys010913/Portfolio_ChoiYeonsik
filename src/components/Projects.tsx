@@ -65,7 +65,7 @@ export const Projects: React.FC<ProjectsProps> = ({ id, title, subtitle, items, 
                       ))}
                     </div>
                   </div>
-                  <h4 className="text-2xl font-display font-bold uppercase tracking-tight">{item.title}</h4>
+                  <h4 className="text-xl md:text-2xl font-display font-bold uppercase tracking-wide">{item.title}</h4>
                   {item.desc && (
                     <p className="text-sm text-black/60 leading-relaxed max-w-md break-keep">
                       {item.desc}
