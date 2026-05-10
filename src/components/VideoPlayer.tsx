@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { Play, Loader2 } from 'lucide-react';
+import { Play } from 'lucide-react';
 import { getEmbedUrl, getImageUrl } from '../lib/drive';
 
 interface VideoPlayerProps {
@@ -12,10 +12,10 @@ interface VideoPlayerProps {
 export const VideoPlayer: React.FC<VideoPlayerProps> = ({ url, title, thumbnailSize = 1280 }) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
   
+  const isDirectVideo = url?.toLowerCase().endsWith('.mp4');
   const thumbnailUrl = getImageUrl(url, thumbnailSize);
-  const embedUrl = getEmbedUrl(url, isMobile); // Autoplay enabled on mobile since it's user-triggered
+  const embedUrl = getEmbedUrl(url, isMobile);
 
   useEffect(() => {
     const checkMobile = () => setIsMobile(window.innerWidth < 1024);
@@ -24,60 +24,62 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({ url, title, thumbnailS
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-  const handlePlay = () => {
-    setIsPlaying(true);
-    setIsLoading(true);
-  };
+  // Use standard video tag for direct .mp4 files
+  const renderDirectVideo = (autoPlay: boolean) => (
+    <video 
+      src={url} 
+      className="w-full h-full object-cover bg-black"
+      controls={isPlaying || !isMobile}
+      autoPlay={autoPlay}
+      muted={!isPlaying}
+      loop
+      playsInline
+    />
+  );
 
-  // On Desktop, show iframe immediately as requested ("Desktop has no issues")
+  // Use iframe for Drive links
+  const renderDriveVideo = (autoplay: boolean) => (
+    <div className="absolute inset-0 w-full h-full bg-black overflow-hidden">
+      <iframe 
+        src={autoplay ? `${embedUrl}${embedUrl.includes('?') ? '&' : '?'}autoplay=1` : embedUrl}
+        className="w-full h-[115%] -top-[7.5%] border-0 absolute inset-0 bg-black z-10"
+        allow="autoplay; fullscreen"
+        allowFullScreen
+        title={title}
+      />
+    </div>
+  );
+
+  // Desktop: High performance direct access
   if (!isMobile) {
     return (
       <div className="w-full h-full bg-black relative">
-        <iframe 
-          src={getEmbedUrl(url, false)}
-          className="w-full h-full border-0 absolute inset-0 bg-black z-10"
-          allow="autoplay; fullscreen"
-          allowFullScreen
-          title={title}
-          loading="lazy"
-        />
+        {isDirectVideo ? renderDirectVideo(true) : renderDriveVideo(false)}
       </div>
     );
   }
 
-  // On Mobile, show thumbnail + play button to ensure one-tap playback experience
+  // Mobile: Consistent Tap-to-Play pattern
   return (
     <div 
-      className="w-full h-full relative cursor-pointer bg-black overflow-hidden group"
-      onClick={() => !isPlaying && handlePlay()}
+      className="w-full h-full relative cursor-pointer bg-black overflow-hidden"
+      onClick={() => !isPlaying && setIsPlaying(true)}
     >
       {isPlaying ? (
         <div className="absolute inset-0 w-full h-full bg-black z-20">
-          {isLoading && (
-            <div className="absolute inset-0 flex items-center justify-center z-10 bg-black">
-              <Loader2 className="w-8 h-8 text-white/40 animate-spin" />
-            </div>
-          )}
-          <iframe 
-            src={embedUrl}
-            className="w-full h-full border-0 absolute inset-0 bg-black"
-            allow="autoplay; fullscreen"
-            allowFullScreen
-            title={title}
-            onLoad={() => setIsLoading(false)}
-          />
+          {isDirectVideo ? renderDirectVideo(true) : renderDriveVideo(true)}
         </div>
       ) : (
         <div className="absolute inset-0 w-full h-full">
           <img 
             src={thumbnailUrl} 
             alt={title} 
-            className="w-full h-full object-cover opacity-60 transition-transform duration-700 group-hover:scale-105"
+            className="w-full h-full object-cover opacity-60"
             referrerPolicy="no-referrer"
           />
-          <div className="absolute inset-0 flex items-center justify-center bg-black/10">
-            <div className="w-16 h-16 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:bg-white/20 shadow-2xl">
-              <Play size={24} className="text-white fill-white ml-1" />
+          <div className="absolute inset-0 flex items-center justify-center bg-black/30">
+            <div className="w-16 h-16 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center shadow-2xl transition-transform active:scale-90">
+              <Play size={28} className="text-white fill-white ml-1" />
             </div>
           </div>
         </div>
