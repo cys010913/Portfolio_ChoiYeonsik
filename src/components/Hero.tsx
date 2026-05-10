@@ -4,7 +4,7 @@ import { motion } from 'motion/react';
 import { ArrowDown } from 'lucide-react';
 
 export const Hero: React.FC = () => (
-  <section className="relative min-h-[90vh] flex flex-col justify-center px-6 border-b border-black/[0.03] py-8 md:py-10 lg:py-20">
+  <section className="relative min-h-[90vh] flex flex-col justify-center px-6 border-b border-black/[0.03] pt-40 pb-16 md:pt-48 md:pb-20 lg:py-40">
     <div className="max-w-7xl mx-auto w-full">
       <motion.div
         initial={{ opacity: 0, scale: 0.98 }}

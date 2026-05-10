@@ -15,7 +15,7 @@ export const Navbar: React.FC = () => {
   }, []);
 
   return (
-    <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${isScrolled || isMenuOpen ? 'bg-white/95 backdrop-blur-xl py-4 border-b border-black/[0.05]' : 'bg-white/50 backdrop-blur-md md:bg-transparent py-6 md:py-8'}`}>
+    <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${isScrolled || isMenuOpen ? 'bg-white/95 backdrop-blur-xl py-3 border-b border-black/[0.05]' : 'bg-white/50 backdrop-blur-md md:bg-transparent py-4 md:py-6'}`}>
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
         <motion.div 
           initial={{ opacity: 0 }}

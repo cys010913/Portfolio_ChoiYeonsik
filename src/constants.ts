@@ -1,6 +1,6 @@
 
 export const NAV_ITEMS = [
-  { name: 'reel', id: 'featured-reel' },
+  { name: '2026 reel', id: 'featured-reel' },
   { name: 'profile', id: 'profile' },
   { name: 'motion', id: 'demoreel' },
   { name: 'engine', id: 'technical' },

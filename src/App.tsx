@@ -47,8 +47,8 @@ export default function App() {
       <Navbar />
       
       <main>
-        <FeaturedReel />
         <Hero />
+        <FeaturedReel />
         <Profile />
         
         {Object.entries(PROJECTS_DATA).map(([id, data]) => (
