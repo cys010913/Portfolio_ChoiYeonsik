@@ -93,14 +93,14 @@ export const PROJECTS_DATA = {
     items: [
       { 
         title: "unreal project: cave", 
-        desc: "personal work", 
-        image: "https://youtu.be/KaoBiGpdyg4",
+        desc: "individual", 
+        image: "https://youtu.be/XVeRtnbC0Mg",
         tags: ["Unreal Engine"] 
       },
       { 
         title: "unreal project: red riding hood", 
         desc: "background design / look dev / shooting & editing", 
-        image: "https://youtu.be/XVeRtnbC0Mg", 
+        image: "https://youtu.be/KaoBiGpdyg4", 
         tags: ["Unreal Engine"] 
       },
       { 
