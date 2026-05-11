@@ -39,12 +39,6 @@ export const PROJECTS_DATA = {
         tags: ["3DS MAX", "Unreal Engine"] 
       },
       { 
-        title: "demo reel ( 2025 )", 
-        desc: "attack, run, walk, fly, facial(maya, 3ds max)", 
-        image: "https://youtu.be/XYGFqjgcxRY", 
-        tags: ["Maya", "3ds Max"] 
-      },
-      { 
         title: "personal work ( 2025 )", 
         desc: "treasure hunter(maya)", 
         image: "https://youtu.be/11bOSDxa4is",
@@ -53,6 +47,12 @@ export const PROJECTS_DATA = {
           text: "View Storyboard",
           url: "#storyboard"
         }
+      },
+      { 
+        title: "school work ( 2025 )", 
+        desc: "attack, run, walk, fly, facial(maya, 3ds max)", 
+        image: "https://youtu.be/XYGFqjgcxRY", 
+        tags: ["Maya", "3ds Max"] 
       }
     ]
   },
