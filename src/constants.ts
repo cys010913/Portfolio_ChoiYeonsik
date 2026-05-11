@@ -5,7 +5,7 @@ export const NAV_ITEMS = [
   { name: 'motion', id: 'demoreel' },
   { name: 'engine', id: 'technical' },
   { name: 'tool', id: 'scripting' },
-  { name: 'drawing', id: 'art' },
+  { name: 'art', id: 'art' },
 ];
 
 export const EXPERIENCES = [
@@ -130,8 +130,8 @@ export const PROJECTS_DATA = {
     ]
   },
   art: {
-    title: "drawing & croquis",
-    subtitle: "drawing",
+    title: "DRAWING&ILLUSTRATION",
+    subtitle: "ILLUSTRATION",
     items: [
       { 
         title: "florist", 
