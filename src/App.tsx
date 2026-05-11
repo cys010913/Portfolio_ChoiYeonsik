@@ -13,7 +13,7 @@ import { ProjectItem } from './types';
 
 export default function App() {
   const [loading, setLoading] = useState(true);
-  const [selectedItem, setSelectedItem] = useState<ProjectItem | null>(null);
+  const [selectedItem, setSelectedItem] = useState<{item: ProjectItem, gallery: ProjectItem[], isScrollMode?: boolean} | null>(null);
 
   useEffect(() => {
     const timer = setTimeout(() => setLoading(false), 1000);
@@ -27,6 +27,36 @@ export default function App() {
     window.addEventListener('keydown', handleEsc);
     return () => window.removeEventListener('keydown', handleEsc);
   }, []);
+
+  const handlePrev = () => {
+    if (!selectedItem) return;
+    const currentIndex = selectedItem.gallery.findIndex(i => i.image === selectedItem.item.image);
+    const prevIndex = (currentIndex - 1 + selectedItem.gallery.length) % selectedItem.gallery.length;
+    setSelectedItem({ item: selectedItem.gallery[prevIndex], gallery: selectedItem.gallery });
+  };
+
+  const handleNext = () => {
+    if (!selectedItem) return;
+    const currentIndex = selectedItem.gallery.findIndex(i => i.image === selectedItem.item.image);
+    const nextIndex = (currentIndex + 1) % selectedItem.gallery.length;
+    setSelectedItem({ item: selectedItem.gallery[nextIndex], gallery: selectedItem.gallery });
+  };
+
+  const handleLinkClick = (url: string) => {
+    if (url.startsWith('#')) {
+      const sectionId = url.substring(1);
+      const section = PROJECTS_DATA[sectionId as keyof typeof PROJECTS_DATA];
+      if (section && (sectionId === 'art' || sectionId === 'storyboard')) {
+        setSelectedItem({ 
+          item: section.items[0], 
+          gallery: section.items,
+          isScrollMode: sectionId === 'storyboard'
+        });
+        return true; // handled
+      }
+    }
+    return false; // not handled
+  };
 
   if (loading) {
     return (
@@ -51,13 +81,16 @@ export default function App() {
         <Hero />
         <Profile />
         
-        {Object.entries(PROJECTS_DATA).map(([id, data]) => (
+        {Object.entries(PROJECTS_DATA)
+          .filter(([id]) => id !== 'storyboard')
+          .map(([id, data]) => (
           <Projects 
             key={id}
             id={id}
             title={data.title}
             subtitle={data.subtitle}
-            onImageClick={setSelectedItem}
+            onImageClick={(item) => setSelectedItem({ item, gallery: data.items })}
+            onLinkClick={handleLinkClick}
             items={data.items}
           />
         ))}
@@ -68,8 +101,12 @@ export default function App() {
       <AnimatePresence>
         {selectedItem && (
           <Lightbox 
-            item={selectedItem} 
+            item={selectedItem.item} 
+            gallery={selectedItem.gallery}
+            isScrollMode={selectedItem.isScrollMode}
             onClose={() => setSelectedItem(null)} 
+            onPrev={!selectedItem.isScrollMode && selectedItem.gallery.length > 1 ? handlePrev : undefined}
+            onNext={!selectedItem.isScrollMode && selectedItem.gallery.length > 1 ? handleNext : undefined}
           />
         )}
       </AnimatePresence>

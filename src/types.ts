@@ -4,6 +4,10 @@ export interface ProjectItem {
   desc?: string;
   image: string;
   tags: string[];
+  link?: {
+    text: string;
+    url: string;
+  };
 }
 
 export interface Experience {

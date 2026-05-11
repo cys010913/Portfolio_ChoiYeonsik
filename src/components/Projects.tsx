@@ -6,15 +6,18 @@ import { ProjectItem } from '../types';
 import { getImageUrl, isDriveVideo } from '../lib/drive';
 import { VideoPlayer } from './VideoPlayer';
 
+import { ArrowRight } from 'lucide-react';
+
 interface ProjectsProps {
   id: string;
   title: string;
   subtitle: string;
   items: ProjectItem[];
   onImageClick?: (item: ProjectItem) => void;
+  onLinkClick?: (url: string) => boolean;
 }
 
-export const Projects: React.FC<ProjectsProps> = ({ id, title, subtitle, items, onImageClick }) => {
+export const Projects: React.FC<ProjectsProps> = ({ id, title, subtitle, items, onImageClick, onLinkClick }) => {
   return (
     <section id={id} className="py-8 md:py-10 px-6 border-b border-black/[0.03] scroll-mt-24">
       <div className="max-w-7xl mx-auto">
@@ -58,14 +61,30 @@ export const Projects: React.FC<ProjectsProps> = ({ id, title, subtitle, items, 
                     <span className="text-[10px] font-mono opacity-20">PROJECT_{idx+1}</span>
                     <div className="h-px w-8 bg-black/10"></div>
                     <div className="flex gap-2">
-                      {item.tags?.map((tag: string, i: number) => (
+                       {item.tags?.map((tag: string, i: number) => (
                         <span key={i} className="text-[9px] font-bold tracking-widest uppercase opacity-40 px-2 py-0.5 border border-black/10">
                           {tag}
                         </span>
                       ))}
                     </div>
                   </div>
-                  <h4 className="text-xl md:text-2xl font-display font-bold uppercase tracking-wide">{item.title}</h4>
+                  <div className="flex flex-col gap-2">
+                    <h4 className="text-xl md:text-2xl font-display font-bold uppercase tracking-wide">{item.title}</h4>
+                    {item.link && (
+                      <a 
+                        href={item.link.url}
+                        onClick={(e) => {
+                          if (onLinkClick?.(item.link!.url)) {
+                            e.preventDefault();
+                          }
+                        }}
+                        className="inline-flex items-center gap-2 text-[11px] font-bold tracking-widest uppercase text-black/40 hover:text-black transition-colors"
+                      >
+                        {item.link.text}
+                        <ArrowRight size={12} />
+                      </a>
+                    )}
+                  </div>
                   {item.desc && (
                     <p className="text-sm text-black/60 leading-relaxed max-w-md break-keep">
                       {item.desc}

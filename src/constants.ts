@@ -48,7 +48,42 @@ export const PROJECTS_DATA = {
         title: "personal work ( 2025 )", 
         desc: "treasure hunter(maya)", 
         image: "https://youtu.be/11bOSDxa4is",
-        tags: ["Maya"] 
+        tags: ["Maya"],
+        link: {
+          text: "View Storyboard",
+          url: "#storyboard"
+        }
+      }
+    ]
+  },
+  storyboard: {
+    title: "work in progress / storyboard",
+    subtitle: "STORYBOARD",
+    items: [
+      {
+        title: "Storyboard 01",
+        image: "https://drive.google.com/file/d/1dk8Ol875Yqw6bT4UaktZtXV_OGBLYKb5/view?usp=drive_link",
+        tags: ["Storyboard"]
+      },
+      {
+        title: "Storyboard 02",
+        image: "https://drive.google.com/file/d/1pPi7PmxtOFSvveNza3_ebHWrIXxO9HOS/view?usp=drive_link",
+        tags: ["Storyboard"]
+      },
+      {
+        title: "Storyboard 03",
+        image: "https://drive.google.com/file/d/19KzuzvtQJh81XobeyonEatcDzMQ5gZKf/view?usp=drive_link",
+        tags: ["Storyboard"]
+      },
+      {
+        title: "Storyboard 04",
+        image: "https://drive.google.com/file/d/1uonzJE-qVQedOBlQDgKmAb1mZa_PXUbf/view?usp=drive_link",
+        tags: ["Storyboard"]
+      },
+      {
+        title: "Storyboard 05",
+        image: "https://drive.google.com/file/d/1KfT2H_z14UT10ejNNCf57GMrwFcEsqQy/view?usp=drive_link",
+        tags: ["Storyboard"]
       }
     ]
   },
