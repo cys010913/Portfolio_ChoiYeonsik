@@ -8,7 +8,7 @@ export const FeaturedReel: React.FC = () => {
   const videoUrl = "https://youtu.be/XYGFqjgcxRY";
 
   return (
-    <section id="featured-reel" className="pt-40 pb-12 md:pt-56 md:pb-16 px-6 border-b border-black/[0.05] bg-black/[0.01] scroll-mt-24">
+    <section id="featured-reel" className="pt-32 pb-12 md:pt-40 md:pb-16 px-6 border-b border-black/[0.05] bg-black/[0.01] scroll-mt-24">
       <div className="max-w-7xl mx-auto">
         <SectionTitle title="2026 GAME ANIMATION REEL" subtitle="Main Showcase" />
         
