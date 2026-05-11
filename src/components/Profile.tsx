@@ -69,9 +69,18 @@ export const Profile: React.FC = () => {
                 <div className="space-y-3 lg:space-y-4">
                   <p className="text-[9px] uppercase tracking-widest font-bold opacity-20 font-mono">language</p>
                   <ul className="text-xs lg:text-sm font-bold text-black/70 font-mono italic space-y-2">
-                    <li>JLPT N1 150</li>
-                    <li>JPT 800</li>
-                    <li>TOEIC 750</li>
+                    <li className="flex justify-between items-center sm:block">
+                      <span>JLPT N1 150</span>
+                      <span className="not-italic font-normal opacity-40 text-[10px] ml-2">2024.01</span>
+                    </li>
+                    <li className="flex justify-between items-center sm:block">
+                      <span>JPT 805</span>
+                      <span className="not-italic font-normal opacity-40 text-[10px] ml-2">2023.07</span>
+                    </li>
+                    <li className="flex justify-between items-center sm:block">
+                      <span>TOEIC 755</span>
+                      <span className="not-italic font-normal opacity-40 text-[10px] ml-2">2023.07</span>
+                    </li>
                   </ul>
                 </div>
                 <div className="sm:col-span-2 lg:col-span-1 space-y-4 pt-8 border-t border-black/10 sm:border-t-0">
