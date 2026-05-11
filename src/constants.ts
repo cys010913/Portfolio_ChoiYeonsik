@@ -34,13 +34,13 @@ export const PROJECTS_DATA = {
     items: [
       { 
         title: "2026 GAME ANIMATION REEL", 
-        desc: "rigging&animation(3ds max)", 
-        image: "https://youtu.be/XYGFqjgcxRY", 
+        desc: "rigging&animation", 
+        image: "https://youtu.be/WroGvdTw7ws", 
         tags: ["3DS MAX", "Unreal Engine"] 
       },
       { 
-        title: "personal work ( 2025 )", 
-        desc: "treasure hunter(maya)", 
+        title: "TREASURE HUNTER ( 2025 )", 
+        desc: "individual", 
         image: "https://youtu.be/11bOSDxa4is",
         tags: ["Maya"],
         link: {
@@ -49,9 +49,9 @@ export const PROJECTS_DATA = {
         }
       },
       { 
-        title: "school work ( 2025 )", 
-        desc: "attack, run, walk, fly, facial(maya, 3ds max)", 
-        image: "https://youtu.be/XYGFqjgcxRY", 
+        title: "demo reel ( 2025 )", 
+        desc: "attack, run, walk, fly, facial", 
+        image: "https://youtu.be/tO-Ojx1Rygs", 
         tags: ["Maya", "3ds Max"] 
       }
     ]
@@ -105,7 +105,7 @@ export const PROJECTS_DATA = {
       },
       { 
         title: "modeling", 
-        desc: "mechanic and temple(maya)", 
+        desc: "mechanic and temple", 
         image: "https://youtu.be/NGJ0q9sSjF4",
         tags: ["MAYA"] 
       }
@@ -124,7 +124,7 @@ export const PROJECTS_DATA = {
       { 
         title: "motion lab", 
         desc: "key copy & paste / anim align / key decimation / preset & memo / scripts collector", 
-        image: "https://youtu.be/p79AmEc6euo",
+        image: "https://youtu.be/7N1zCga5hqM",
         tags: ["Tool", "Script"] 
       }
     ]
