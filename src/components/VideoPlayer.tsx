@@ -42,20 +42,23 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({ url, title, thumbnailS
   );
 
   const renderEmbedVideo = (autoPlay: boolean) => {
-    const isYouTube = embedUrl.includes('youtube.com');
+    const isYouTube = embedUrl.includes('youtube.com') || embedUrl.includes('youtu.be');
     const finalUrl = autoPlay 
-      ? `${embedUrl}${embedUrl.includes('?') ? '&' : '?'}autoplay=1${isYouTube ? '&mute=1' : ''}` 
+      ? `${embedUrl}${embedUrl.includes('?') ? '&' : '?'}autoplay=1${isYouTube ? '&mute=1&playsinline=1' : ''}` 
       : embedUrl;
 
     return (
-      <div className="absolute inset-0 w-full h-full bg-black overflow-hidden">
+      <div className="absolute inset-0 w-full h-full bg-black overflow-hidden flex items-center justify-center">
         <iframe 
           src={finalUrl}
           className="w-full h-full border-0 absolute inset-0 bg-black z-10"
-          allow="autoplay; fullscreen"
+          allow="autoplay; fullscreen; picture-in-picture"
           allowFullScreen
           title={title}
         />
+        <div className="text-white/20 text-[10px] items-center gap-2 flex">
+          loading video...
+        </div>
       </div>
     );
   };

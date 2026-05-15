@@ -18,7 +18,7 @@ export const getImageUrl = (url: string, size: number = 1000) => {
   // YouTube Thumbnail
   const youtubeMatch = url.match(/(?:youtu\.be\/|youtube\.com\/(?:.*v=|\/v\/|embed\/))([^?&]+)/);
   if (youtubeMatch) {
-    return `https://img.youtube.com/vi/${youtubeMatch[1]}/maxresdefault.jpg`;
+    return `https://img.youtube.com/vi/${youtubeMatch[1]}/hqdefault.jpg`;
   }
 
   // Google Drive Thumbnail

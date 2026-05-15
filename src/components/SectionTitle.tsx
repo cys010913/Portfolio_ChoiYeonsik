@@ -12,6 +12,6 @@ export const SectionTitle: React.FC<SectionTitleProps> = ({ title, subtitle }) =
       <div className="h-px w-6 md:w-8 bg-black/20"></div>
       <span className="text-[9px] md:text-[10px] font-bold tracking-[0.3em] uppercase opacity-30 font-mono">{subtitle}</span>
     </div>
-    <h2 className="text-4xl md:text-6xl font-display font-bold tracking-tighter uppercase leading-[0.85] md:leading-none break-keep">{title}</h2>
+    <h2 className="text-4xl md:text-6xl font-display font-bold tracking-tighter uppercase leading-[0.85] md:leading-none break-keep whitespace-pre-line">{title}</h2>
   </div>
 );

@@ -35,7 +35,7 @@ export const PROJECTS_DATA = {
       { 
         title: "2026 GAME ANIMATION REEL", 
         desc: "rigging&animation", 
-        image: "https://youtu.be/WroGvdTw7ws", 
+        image: "https://youtu.be/ep3x31oFnk0", 
         tags: ["3DS MAX", "Unreal Engine"] 
       },
       { 
@@ -119,18 +119,26 @@ export const PROJECTS_DATA = {
         title: "COM tracker", 
         desc: "part selection / 2D trajectory map / playback speed / range selection / scrubbing / loop playback / sketch and onion skin", 
         image: "https://youtu.be/p79AmEc6euo",
-        tags: ["Tool", "Script"] 
+        tags: ["Tool", "Script"],
+        link: {
+          text: "Watch on YouTube",
+          url: "https://youtu.be/p79AmEc6euo"
+        }
       },
       { 
         title: "motion lab", 
         desc: "key copy & paste / anim align / key decimation / preset & memo / scripts collector", 
         image: "https://youtu.be/7N1zCga5hqM",
-        tags: ["Tool", "Script"] 
+        tags: ["Tool", "Script"],
+        link: {
+          text: "Watch on YouTube",
+          url: "https://youtu.be/7N1zCga5hqM"
+        }
       }
     ]
   },
   art: {
-    title: "DRAWING&ILLUSTRATION",
+    title: "DRAWING &\nILLUSTRATION",
     subtitle: "ILLUSTRATION",
     items: [
       { 

@@ -21,7 +21,7 @@ export const Hero: React.FC = () => (
           </div>
           <button 
             onClick={() => {
-              const el = document.getElementById('featured-reel');
+              const el = document.getElementById('demoreel');
               if (el) el.scrollIntoView({ behavior: 'smooth' });
             }}
             className="flex items-center gap-4 md:gap-4 group cursor-pointer w-fit"
