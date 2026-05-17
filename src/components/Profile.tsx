@@ -61,7 +61,7 @@ export const Profile: React.FC = () => {
                     <li>3ds max</li>
                     <li>unreal engine</li>
                     <li>photoshop</li>
-                    <li>illustrator</li>
+                    <li>3D layout artist</li>
                     <li>premiere pro</li>
                     <li>clip studio</li>
                   </ul>

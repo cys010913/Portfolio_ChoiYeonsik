@@ -73,7 +73,7 @@ export default function App() {
   }
 
   return (
-    <div className="relative selection:bg-black selection:text-white bg-[#F9F9F7]">
+    <div className="relative selection:bg-black selection:text-white bg-[#F9F9F7] overflow-x-hidden">
       <Navbar />
       
       <main>

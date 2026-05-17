@@ -26,7 +26,7 @@ export const Navbar: React.FC = () => {
         </motion.div>
         
         {/* Desktop Menu */}
-        <div className="hidden md:flex gap-6 lg:gap-10 overflow-x-auto no-scrollbar scroll-smooth px-2">
+        <div className="hidden lg:flex gap-10 overflow-x-auto no-scrollbar scroll-smooth px-2">
           {NAV_ITEMS.map((item) => (
             <a 
               key={item.id}
@@ -40,7 +40,7 @@ export const Navbar: React.FC = () => {
 
         {/* Mobile Toggle */}
         <button 
-          className="md:hidden p-2 -mr-2"
+          className="lg:hidden p-2 -mr-2"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
