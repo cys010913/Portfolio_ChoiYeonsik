@@ -6,7 +6,7 @@ export const Footer: React.FC = () => (
     <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-end gap-12">
       <div className="space-y-6">
         <h2 className="text-6xl md:text-8xl font-display font-black uppercase tracking-tighter">youn_sic</h2>
-        <p className="text-lg opacity-50 font-mono">3D animator / illustrator</p>
+        <p className="text-lg opacity-50 font-mono">3D animator / 3D layout artist</p>
       </div>
       <div className="flex flex-col items-end gap-4 uppercase font-mono">
         <a href="mailto:cys010913@gmail.com" className="text-xl md:text-2xl border-b border-white/20 pb-2 hover:border-white transition-all">cys010913@gmail.com</a>

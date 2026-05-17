@@ -49,7 +49,7 @@ export const PROJECTS_DATA = {
         }
       },
       { 
-        title: "demo reel ( 2025 )", 
+        title: "SCHOOL WORK ( 2025 )", 
         desc: "attack, run, walk, fly, facial", 
         image: "https://youtu.be/tO-Ojx1Rygs", 
         tags: ["Maya", "3ds Max"] 

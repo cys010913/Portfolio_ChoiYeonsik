@@ -73,15 +73,17 @@ export const Projects: React.FC<ProjectsProps> = ({ id, title, subtitle, items, 
                     {item.link && (
                       <a 
                         href={item.link.url}
+                        target={item.link.url.startsWith('http') ? "_blank" : undefined}
+                        rel={item.link.url.startsWith('http') ? "noopener noreferrer" : undefined}
                         onClick={(e) => {
                           if (onLinkClick?.(item.link!.url)) {
                             e.preventDefault();
                           }
                         }}
-                        className="inline-flex items-center gap-2 text-[11px] font-bold tracking-widest uppercase text-black/40 hover:text-black transition-colors"
+                        className="inline-flex items-center gap-3 px-6 py-3 bg-black text-white text-[10px] font-bold tracking-[0.25em] uppercase hover:bg-black/90 hover:shadow-[0_10px_30px_rgba(0,0,0,0.1)] hover:-translate-y-0.5 active:scale-95 transition-all w-fit group mt-2"
                       >
                         {item.link.text}
-                        <ArrowRight size={12} />
+                        <ArrowRight size={14} className="group-hover:translate-x-1.5 transition-transform" />
                       </a>
                     )}
                   </div>
