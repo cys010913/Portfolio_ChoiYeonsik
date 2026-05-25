@@ -126,6 +126,12 @@ export const PROJECTS_DATA = {
         desc: "key copy & paste / anim align / key decimation / preset & memo / scripts collector", 
         image: "https://youtu.be/7N1zCga5hqM",
         tags: ["Tool", "Script"]
+      },
+      { 
+        title: "FACIAL RIGGING", 
+        desc: "animation test", 
+        image: "https://youtu.be/8mTBqeCCAlY",
+        tags: ["Tool", "Script"]
       }
     ]
   },
