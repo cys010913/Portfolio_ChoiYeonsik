@@ -3,8 +3,8 @@ export const NAV_ITEMS = [
   { name: '2026 reel', id: 'featured-reel' },
   { name: 'profile', id: 'profile' },
   { name: 'motion', id: 'demoreel' },
-  { name: 'engine', id: 'technical' },
   { name: 'tool', id: 'scripting' },
+  { name: 'engine', id: 'technical' },
   { name: 'art', id: 'art' },
 ];
 
@@ -87,30 +87,6 @@ export const PROJECTS_DATA = {
       }
     ]
   },
-  technical: {
-    title: "unreal & modeling",
-    subtitle: "ENGINE",
-    items: [
-      { 
-        title: "unreal project: cave", 
-        desc: "individual", 
-        image: "https://youtu.be/XVeRtnbC0Mg",
-        tags: ["Unreal Engine"] 
-      },
-      { 
-        title: "unreal project: red riding hood", 
-        desc: "background design / look dev / shooting & editing", 
-        image: "https://youtu.be/KaoBiGpdyg4", 
-        tags: ["Unreal Engine"] 
-      },
-      { 
-        title: "modeling", 
-        desc: "mechanic and temple", 
-        image: "https://youtu.be/NGJ0q9sSjF4",
-        tags: ["MAYA"] 
-      }
-    ]
-  },
   scripting: {
     title: "tool & script",
     subtitle: "TOOL",
@@ -132,6 +108,30 @@ export const PROJECTS_DATA = {
         desc: "animation test", 
         image: "https://youtu.be/8mTBqeCCAlY",
         tags: ["Tool", "Script"]
+      }
+    ]
+  },
+  technical: {
+    title: "unreal & modeling",
+    subtitle: "ENGINE",
+    items: [
+      { 
+        title: "unreal project: cave", 
+        desc: "individual", 
+        image: "https://youtu.be/XVeRtnbC0Mg",
+        tags: ["Unreal Engine"] 
+      },
+      { 
+        title: "unreal project: red riding hood", 
+        desc: "background design / look dev / shooting & editing", 
+        image: "https://youtu.be/KaoBiGpdyg4", 
+        tags: ["Unreal Engine"] 
+      },
+      { 
+        title: "modeling", 
+        desc: "mechanic and temple", 
+        image: "https://youtu.be/NGJ0q9sSjF4",
+        tags: ["MAYA"] 
       }
     ]
   },
