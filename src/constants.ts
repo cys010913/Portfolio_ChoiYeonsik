@@ -17,6 +17,11 @@ export const EXPERIENCES = [
   { company: "체코 Adler(의류 제조 및 유통) 인턴십 3개월 과정 수료", period: "2019" }
 ];
 
+export const AWARDS = [
+  { title: "2025 Competition(Commissioned Films) Nominated", event: "안시 국제 애니메이션 영화제", year: "2025" },
+  { title: "2024 코미디상 수상", event: "CKAS 2025 내부시상식", year: "2024" }
+];
+
 export const CERTIFICATIONS = [
   { title: "워드프로세서", category: "Computing" },
   { title: "GTQ 그래픽기술자격 2급", category: "Graphic Arts" },
