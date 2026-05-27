@@ -56,7 +56,7 @@ export const Profile: React.FC = () => {
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:contents gap-x-8 gap-y-8 pt-8 lg:pt-0 border-t border-black/10 lg:border-t-0">
                 <div className="space-y-3 lg:space-y-4 lg:border-t lg:border-black/10 lg:pt-8 lg:w-full">
                   <p className="text-[10px] sm:text-xs uppercase tracking-widest font-bold opacity-30 font-mono">tools</p>
-                  <ul className="text-sm sm:text-base lg:text-lg font-medium text-black/90 font-mono grid grid-cols-2 gap-y-[10px] gap-x-4 uppercase italic leading-none">
+                  <ul className="text-sm sm:text-base lg:text-lg font-medium text-black/90 font-mono grid grid-cols-2 gap-y-3 lg:gap-y-4 gap-x-4 uppercase italic leading-normal">
                     <li>maya</li>
                     <li>3ds max</li>
                     <li>unreal engine</li>
@@ -69,7 +69,7 @@ export const Profile: React.FC = () => {
                 </div>
                 <div className="space-y-3 lg:space-y-4 lg:border-t lg:border-black/10 lg:pt-8 lg:w-full">
                   <p className="text-[10px] sm:text-xs uppercase tracking-widest font-bold opacity-30 font-mono">language</p>
-                  <ul className="text-sm sm:text-base lg:text-lg font-medium text-black/70 font-mono italic space-y-[10px] leading-none">
+                  <ul className="text-sm sm:text-base lg:text-lg font-medium text-black/70 font-mono italic space-y-3 lg:space-y-4 leading-normal">
                     <li className="flex justify-between items-baseline sm:block">
                       <span>JLPT N1 150</span>
                       <span className="not-italic font-normal opacity-40 text-[10px] sm:text-xs ml-2">2024.01</span>
