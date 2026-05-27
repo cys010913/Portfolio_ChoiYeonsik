@@ -28,7 +28,7 @@ export const FeaturedReel: React.FC = () => {
           </p>
           <div className="flex flex-wrap gap-2">
             <span className="text-[10px] font-bold tracking-widest uppercase px-3 py-1 border border-black/10">3DS MAX</span>
-            <span className="text-[10px] font-bold tracking-widest uppercase px-3 py-1 border border-black/10">Unreal Engine</span>
+            <span className="text-[10px] font-bold tracking-widest uppercase px-3 py-1 border border-black/10">MARMOSET</span>
           </div>
         </div>
       </div>
