@@ -162,9 +162,16 @@ export const Profile: React.FC = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8 lg:gap-y-6">
                 {CERTIFICATIONS.map((cert, i) => (
                   <div key={i} className="group border-l border-black/10 pl-6 hover:border-black transition-colors py-2">
-                    <p className="text-base font-bold text-black/80 leading-snug mb-3 break-keep group-hover:text-black transition-colors">
-                      {cert.title}
-                    </p>
+                    <div className="flex justify-between items-start gap-4 mb-2">
+                      <p className="text-base font-bold text-black/80 leading-snug break-keep group-hover:text-black transition-colors">
+                        {cert.title}
+                      </p>
+                      {cert.date && (
+                        <span className="text-[10px] font-mono font-bold opacity-30 whitespace-nowrap mt-1">
+                          {cert.date}
+                        </span>
+                      )}
+                    </div>
                     <div className="flex items-center gap-3">
                       <p className="text-[10px] uppercase tracking-[0.2em] font-bold opacity-40 font-mono italic">{cert.category}</p>
                     </div>

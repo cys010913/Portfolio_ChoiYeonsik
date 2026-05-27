@@ -23,13 +23,13 @@ export const AWARDS = [
 ];
 
 export const CERTIFICATIONS = [
-  { title: "워드프로세서", category: "Computing" },
-  { title: "GTQ 그래픽기술자격 2급", category: "Graphic Arts" },
-  { title: "컴퓨터 활용능력 2급", category: "Computing" },
-  { title: "ITQ 아래한글 A", category: "Business Tools" },
-  { title: "ITQ MS워드 A", category: "Business Tools" },
-  { title: "ITQ 한글엑셀 A", category: "Business Tools" },
-  { title: "ITQ 파워포인트 A", category: "Business Tools" }
+  { title: "GTQ 그래픽기술자격 2급", category: "Graphic Arts", date: "2019. 08" },
+  { title: "ITQ MS워드 A", category: "Business Tools", date: "2019. 08" },
+  { title: "ITQ 파워포인트 A", category: "Business Tools", date: "2019. 08" },
+  { title: "ITQ 한글엑셀 A", category: "Business Tools", date: "2019. 08" },
+  { title: "컴퓨터 활용능력 2급", category: "Computing", date: "2017. 11" },
+  { title: "워드프로세서", category: "Computing", date: "2017. 09" },
+  { title: "ITQ 아래한글 A", category: "Business Tools", date: "2017. 04" }
 ];
 
 export const PROJECTS_DATA = {
