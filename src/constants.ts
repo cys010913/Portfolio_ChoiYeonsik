@@ -41,7 +41,7 @@ export const PROJECTS_DATA = {
         title: "2026 GAME ANIMATION REEL", 
         desc: "rigging&animation", 
         image: "https://youtu.be/3ypiPD-iLcg", 
-        tags: ["3DS MAX", "Unreal Engine"] 
+        tags: ["3DS MAX", "MARMOSET"] 
       },
       { 
         title: "TREASURE HUNTER ( 2025 )", 
@@ -162,7 +162,7 @@ export const PROJECTS_DATA = {
       { 
         title: "mini", 
         image: "https://drive.google.com/file/d/16n-M86CTc31_tpHqboYOyxEsIhJTJgTg/view?usp=drive_link",
-        tags: ["croquis"] 
+        tags: ["drawing"] 
       },
       { 
         title: "winter", 
