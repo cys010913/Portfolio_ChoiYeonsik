@@ -14,11 +14,11 @@ export const EXPERIENCES = [
   { company: "UJEP(체코 우스티나트라벰 소재 대학교) 체코어 class 2개월 과정 수료", period: "2019" },
   { company: "UJEP(체코 우스티나트라벰 소재 대학교) IT class 2개월 과정 수료", period: "2019" },
   { company: "Poradna pro integraci 어학원 체코어 2개월 과정 수료", period: "2019" },
-  { company: "체코 Adler(의류 제조 및 유통) 인턴십 3개월 과정 수료", period: "2019" }
+  { company: "체코 Adler IT Department 인턴십 3개월 과정 수료", period: "2019" }
 ];
 
 export const AWARDS = [
-  { title: "2025 Competition(Commissioned Films) Nominated", event: "안시 국제 애니메이션 영화제", year: "2025" },
+  { title: "2025 Competition(Commissioned Films) Nominated", event: "프랑스 안시 국제 애니메이션 영화제", year: "2025" },
   { title: "2024 코미디상 수상", event: "CKAS 2025 내부시상식", year: "2024" }
 ];
 
