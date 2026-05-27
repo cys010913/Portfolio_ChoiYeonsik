@@ -72,15 +72,15 @@ export const Profile: React.FC = () => {
                   <ul className="text-sm sm:text-base lg:text-lg font-medium text-black/70 font-mono italic space-y-3 lg:space-y-4 leading-normal">
                     <li className="flex justify-between items-baseline sm:block">
                       <span>JLPT N1 150</span>
-                      <span className="not-italic font-normal opacity-40 text-[10px] sm:text-xs ml-2">2024.01</span>
+                      <span className="not-italic font-bold opacity-40 text-[10px] sm:text-xs ml-2">2024.01</span>
                     </li>
                     <li className="flex justify-between items-baseline sm:block">
                       <span>JPT 805</span>
-                      <span className="not-italic font-normal opacity-40 text-[10px] sm:text-xs ml-2">2023.07</span>
+                      <span className="not-italic font-bold opacity-40 text-[10px] sm:text-xs ml-2">2023.07</span>
                     </li>
                     <li className="flex justify-between items-baseline sm:block">
                       <span>TOEIC 755</span>
-                      <span className="not-italic font-normal opacity-40 text-[10px] sm:text-xs ml-2">2023.07</span>
+                      <span className="not-italic font-bold opacity-40 text-[10px] sm:text-xs ml-2">2023.07</span>
                     </li>
                   </ul>
                 </div>
@@ -142,7 +142,7 @@ export const Profile: React.FC = () => {
                       <span className="text-base md:text-xl font-display font-medium uppercase break-keep transition-all group-hover:translate-x-2 leading-tight">
                         {award.title}
                       </span>
-                      <span className="text-xs text-black/40 break-keep font-sans transition-all group-hover:translate-x-2">
+                      <span className="text-xs text-black/40 break-keep font-display font-bold transition-all group-hover:translate-x-2">
                         {award.event}
                       </span>
                     </div>
