@@ -121,7 +121,7 @@ export const PROJECTS_DATA = {
     subtitle: "ENGINE",
     items: [
       { 
-        title: "cave", 
+        title: "DESERT TEMPLE", 
         desc: "individual", 
         image: "https://youtu.be/XVeRtnbC0Mg",
         tags: ["Unreal Engine"] 
