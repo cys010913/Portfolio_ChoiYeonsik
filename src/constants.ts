@@ -18,8 +18,8 @@ export const EXPERIENCES = [
 ];
 
 export const AWARDS = [
-  { title: "2025 Competition(Commissioned Films) Nominated", event: "프랑스 안시 국제 애니메이션 영화제", year: "2025" },
-  { title: "2024 코미디상 수상", event: "CKAS 2025 내부시상식", year: "2024" }
+  { title: "<GET BACK> 2025 Competition(Commissioned Films) Nominated", event: "프랑스 안시 국제 애니메이션 영화제", year: "2025" },
+  { title: "<샴푸의 요정> 코미디상 수상", event: "CKAS 2025 내부시상식", year: "2024" }
 ];
 
 export const CERTIFICATIONS = [
@@ -121,13 +121,13 @@ export const PROJECTS_DATA = {
     subtitle: "ENGINE",
     items: [
       { 
-        title: "unreal project: cave", 
+        title: "cave", 
         desc: "individual", 
         image: "https://youtu.be/XVeRtnbC0Mg",
         tags: ["Unreal Engine"] 
       },
       { 
-        title: "unreal project: red riding hood", 
+        title: "red riding hood", 
         desc: "background design / look dev / shooting & editing", 
         image: "https://youtu.be/KaoBiGpdyg4", 
         tags: ["Unreal Engine"] 
