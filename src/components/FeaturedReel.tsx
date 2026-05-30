@@ -5,7 +5,7 @@ import { SectionTitle } from './SectionTitle';
 import { VideoPlayer } from './VideoPlayer';
 
 export const FeaturedReel: React.FC = () => {
-  const videoUrl = "https://youtu.be/P5cMZ54sDEQ";
+  const videoUrl = "https://youtu.be/_ROFe2bqruY";
 
   return (
     <section id="featured-reel" className="pt-32 pb-12 md:pt-40 md:pb-16 px-6 border-b border-black/[0.05] bg-black/[0.01] scroll-mt-24">

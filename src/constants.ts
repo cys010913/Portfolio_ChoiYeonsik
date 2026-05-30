@@ -40,7 +40,7 @@ export const PROJECTS_DATA = {
       { 
         title: "2026 GAME ANIMATION REEL", 
         desc: "rigging&animation", 
-        image: "https://youtu.be/P5cMZ54sDEQ", 
+        image: "https://youtu.be/_ROFe2bqruY", 
         tags: ["3DS MAX", "MARMOSET"] 
       },
       { 
