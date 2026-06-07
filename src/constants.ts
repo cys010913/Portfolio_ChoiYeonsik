@@ -56,7 +56,7 @@ export const PROJECTS_DATA = {
       { 
         title: "SCHOOL WORK ( 2025 )", 
         desc: "attack, idle, run, fly, facial", 
-        image: "https://youtu.be/qPk9dNHoONU", 
+        image: "https://youtu.be/y0-JxFORQvQ", 
         tags: ["Maya", "3ds Max"] 
       }
     ]
