@@ -104,7 +104,7 @@ export const PROJECTS_DATA = {
       },
       { 
         title: "COM tracker", 
-        desc: "part selection / 2D trajectory map / playback speed / range selection / scrubbing / loop playback / sketch and onion skin", 
+        desc: "part trajectory / part selection / 2D trajectory map / playback speed / range selection / scrubbing / loop playback / sketch and onion skin", 
         image: "https://youtu.be/p79AmEc6euo",
         tags: ["Tool", "Script"]
       },
